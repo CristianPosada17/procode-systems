@@ -1,0 +1,241 @@
+---
+const posts = [
+  {
+    category: "Redes",
+    href: "/blog/senales-red-internet-necesita-revision",
+    title: "Señales de que tu red de internet necesita una revisión técnica",
+    description:
+      "Caídas constantes, zonas sin señal, lentitud o equipos desconectándose pueden indicar que tu red no está bien estructurada.",
+    readTime: "4 min",
+  },
+  {
+    category: "Infraestructura",
+    title: "Por qué un rack ordenado mejora la operación de tu negocio",
+    href: "/blog/rack-ordenado-mejora-operacion",
+    description:
+      "Un rack limpio y etiquetado facilita mantenimiento, reduce fallas y permite crecer sin convertir tu instalación en un problema.",
+    readTime: "5 min",
+  },
+  {
+    category: "Procesos",
+    title: "Cómo la tecnología puede ordenar tus procesos internos",
+    href: "/blog/tecnologia-ordenar-procesos-internos",
+    description:
+      "No todo se trata de cables. También es importante que la información, tareas y seguimiento interno tengan una estructura clara.",
+    readTime: "6 min",
+  },
+];
+
+const topics = [
+  "Cableado estructurado",
+  "Redes empresariales",
+  "Racks y equipos",
+  "Soporte técnico",
+  "Procesos digitales",
+  "Mantenimiento preventivo",
+];
+---
+
+<section
+  id="blog"
+  class="relative overflow-hidden bg-[#020817] py-20 text-white scroll-mt-32 sm:py-24 lg:py-28"
+>
+  <!-- Fondo decorativo -->
+  <div class="pointer-events-none absolute inset-0">
+    <div
+      class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.12),transparent_34%),radial-gradient(circle_at_bottom_left,rgba(31,79,134,0.14),transparent_38%)]"
+    >
+    </div>
+    <div
+      class="absolute left-1/2 top-0 h-px w-[72%] -translate-x-1/2 bg-gradient-to-r from-transparent via-blue-400/35 to-transparent"
+    >
+    </div>
+  </div>
+
+  <div
+    class="relative mx-auto w-full max-w-[1480px] px-4 sm:px-6 lg:px-10 2xl:max-w-[1600px]"
+  >
+    <!-- Header de sección -->
+    <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+      <div>
+        <p
+          class="text-xs font-semibold uppercase tracking-[0.32em] text-blue-300"
+        >
+          Recursos técnicos
+        </p>
+
+        <h2
+          class="mt-4 max-w-3xl text-3xl font-bold tracking-[-0.03em] text-white sm:text-4xl md:text-5xl"
+        >
+          Aprende a detectar problemas antes de que afecten tu operación.
+        </h2>
+      </div>
+
+      <p
+        class="max-w-2xl text-sm leading-7 text-slate-300 sm:text-base sm:leading-8 lg:ml-auto"
+      >
+        Compartimos consejos, guías y recomendaciones para ayudarte a entender
+        mejor tu infraestructura tecnológica, mantener tu red estable y tomar
+        mejores decisiones antes de invertir en equipos o instalaciones.
+      </p>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="mt-14 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+      <!-- Posts -->
+      <div class="grid gap-5">
+        {
+          posts.map((post, index) => (
+            <article class="group relative overflow-hidden rounded-[28px] border border-white/10 bg-[#061126]/70 p-6 shadow-[0_0_40px_rgba(37,99,235,0.10)] backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-blue-300/30 hover:bg-[#071A33]/85 hover:shadow-[0_0_55px_rgba(37,99,235,0.22)] sm:p-7">
+              <div class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <div class="absolute -right-24 -top-24 h-52 w-52 rounded-full bg-blue-500/15 blur-[80px]" />
+              </div>
+
+              <div class="relative z-10 flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+                <div>
+                  <div class="flex flex-wrap items-center gap-3">
+                    <span class="rounded-full border border-blue-300/20 bg-blue-500/10 px-3 py-1.5 text-xs font-semibold text-blue-300">
+                      {post.category}
+                    </span>
+
+                    <span class="text-xs font-semibold text-slate-500">
+                      {post.readTime} de lectura
+                    </span>
+                  </div>
+
+                  <h3 class="mt-4 max-w-3xl text-xl font-bold tracking-[-0.02em] text-white sm:text-2xl">
+                    {post.title}
+                  </h3>
+
+                  <p class="mt-4 max-w-3xl text-sm leading-7 text-slate-400 sm:text-base">
+                    {post.description}
+                  </p>
+                </div>
+
+                <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-blue-300/20 bg-blue-500/10 text-sm font-black text-blue-300">
+                  0{index + 1}
+                </div>
+              </div>
+
+              <a
+                href={post.href}
+                class="relative z-10 mt-6 flex items-center gap-2 text-sm font-semibold text-blue-300"
+              >
+                Leer recurso
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 12h14"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m12 5 7 7-7 7"
+                  />
+                </svg>
+              </a>
+            </article>
+          ))
+        }
+      </div>
+
+      <!-- Panel lateral -->
+      <aside
+        class="relative overflow-hidden rounded-[30px] border border-blue-300/15 bg-[#061126]/70 p-6 shadow-[0_0_55px_rgba(37,99,235,0.16)] backdrop-blur-xl sm:p-7 lg:sticky lg:top-32 lg:self-start"
+      >
+        <div
+          class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.18),transparent_42%)]"
+        >
+        </div>
+
+        <div class="relative">
+          <div class="flex items-center gap-3">
+            <img
+              src="/Logo/Logofondoazul.webp"
+              alt="ProCode Systems"
+              class="h-14 w-14 rounded-full object-contain shadow-[0_0_24px_rgba(59,130,246,0.35)]"
+            />
+
+            <div>
+              <p class="text-lg font-bold text-white">Guías ProCode</p>
+              <p class="text-sm text-slate-400">Conocimiento práctico</p>
+            </div>
+          </div>
+
+          <div
+            class="mt-6 rounded-[24px] border border-white/10 bg-[#020817]/60 p-5"
+          >
+            <p
+              class="text-xs font-semibold uppercase tracking-[0.24em] text-blue-300"
+            >
+              Temas principales
+            </p>
+
+            <div class="mt-5 flex flex-wrap gap-2">
+              {
+                topics.map((topic) => (
+                  <span class="rounded-full border border-white/10 bg-white/[0.035] px-3 py-1.5 text-xs font-semibold text-slate-300">
+                    {topic}
+                  </span>
+                ))
+              }
+            </div>
+          </div>
+
+          <div
+            class="mt-5 rounded-[24px] border border-white/10 bg-[#020817]/60 p-5"
+          >
+            <p
+              class="text-xs font-semibold uppercase tracking-[0.24em] text-blue-300"
+            >
+              Recomendación
+            </p>
+
+            <h3 class="mt-3 text-xl font-bold text-white">
+              Si tu internet falla seguido, el problema no siempre es el
+              proveedor.
+            </h3>
+
+            <p class="mt-3 text-sm leading-7 text-slate-400">
+              Muchas veces la causa está en una mala distribución de red,
+              equipos saturados, cableado desordenado o falta de configuración
+              adecuada.
+            </p>
+
+            <a
+              href="#contacto"
+              class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl border border-blue-300/20 bg-gradient-to-r from-[#1d4ed8] to-[#2563eb] px-5 py-3.5 text-sm font-bold text-white shadow-[0_0_30px_rgba(37,99,235,0.38)] transition-all duration-300 hover:from-blue-500 hover:to-blue-400"
+            >
+              Solicitar revisión
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5 12h14"></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
